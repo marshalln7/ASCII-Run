@@ -13,7 +13,7 @@ current_jump_height = 0
 distance_from_top = 0
 lives = 5
 
-character = "Character Files\\Guy.txt"
+character = "Character Art\\Guy.txt"
 
 jump_counter = 0
 
@@ -31,12 +31,12 @@ def intro():
 def select_character():
     global character
     print('\nChoose your warrior...\n')
-    options = glob.glob('Character Files/*.txt')
+    options = glob.glob('Character Art/*.txt')
     for option in options:
         option = option.replace('.txt', '')
-        option = option.replace('Character Files\\', '')
+        option = option.replace('Character Art\\', '')
         print(option)
-    character = 'Character Files\\' + input('\nEnter character name: ') + '.txt'
+    character = 'Character Art\\' + input('\nEnter character name: ') + '.txt'
     
 
 def fetch_animation_pane():
@@ -316,6 +316,6 @@ while True:
         end_game()
     
     time.sleep(0.25)
-    distance = distance + 1
+    distance = distance + 2
 
 
